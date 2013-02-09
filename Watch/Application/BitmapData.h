@@ -49,8 +49,14 @@ extern const unsigned char pTemplate[][BYTES_PER_SCREEN];
 
 extern const unsigned char pWidgetTemplate[][6 * 48];
 #define WIDGET_TEMPLATE_NUM (sizeof(pWidgetTemplate) / (6 * 48))
+#if (TOOLSET != IAR_TOOLS)
+  #ifndef  __data20
+    #define __data20
+  #endif
+#endif
 
 extern __data20 const unsigned char pWatchFace[][1]; //TEMPLATE_FLASH_SIZE];
+
 #define TEMPLATE20_NUM      (sizeof(pWatchFace) / TEMPLATE_FLASH_SIZE)
 
 #endif /* BITMAPDATA_H */

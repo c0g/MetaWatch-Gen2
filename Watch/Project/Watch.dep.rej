@@ -1,0 +1,4161 @@
+***************
+*** 2,37 ****
+  
+  <project>
+    <fileVersion>2</fileVersion>
+-   <fileChecksum>2476942042</fileChecksum>
+    <configuration>
+      <name>Gen1</name>
+      <outputs>
+-       <file>$PROJ_DIR$\..\Application\Buttons.c</file>
+-       <file>$PROJ_DIR$\..\Application\Vibration.c</file>
+-       <file>$PROJ_DIR$\..\Application\Utilities.c</file>
+        <file>$PROJ_DIR$\..\Application\Statistics.c</file>
+        <file>$PROJ_DIR$\..\Application\TestMode.c</file>
+-       <file>$PROJ_DIR$\..\Application\Accelerometer.c</file>
+-       <file>$PROJ_DIR$\..\Application\BufferPool.c</file>
+-       <file>$PROJ_DIR$\..\Application\PreInclude.h</file>
+-       <file>$PROJ_DIR$\..\Application\OledFonts.c</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDriver.c</file>
+        <file>$PROJ_DIR$\..\Application\main.c</file>
+        <file>$PROJ_DIR$\..\Application\MessageInfo.h</file>
+-       <file>$PROJ_DIR$\..\Application\DebugUart.c</file>
+-       <file>$PROJ_DIR$\..\Application\OledDisplay.c</file>
+        <file>$PROJ_DIR$\..\Application\MessageQueues.c</file>
+-       <file>$PROJ_DIR$\..\Application\BitmapData.c</file>
+-       <file>$PROJ_DIR$\..\Application\Icons.c</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDisplay.c</file>
+        <file>$PROJ_DIR$\..\Application\Messages.h</file>
+-       <file>$PROJ_DIR$\..\Application\Display.c</file>
+-       <file>$PROJ_DIR$\..\Application\IdleTask.c</file>
+-       <file>$PROJ_DIR$\..\Application\Fonts.c</file>
+        <file>$PROJ_DIR$\..\Application\OneSecondTimers.c</file>
+-       <file>$PROJ_DIR$\..\Application\SerialRam.c</file>
+        <file>$PROJ_DIR$\..\Application\Adc.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\list.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\portable.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\projdefs.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\queue.h</file>
+--- 2,152 ----
+  
+  <project>
+    <fileVersion>2</fileVersion>
++   <fileChecksum>1394609230</fileChecksum>
+    <configuration>
+      <name>Gen1</name>
+      <outputs>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_lpm.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_calibration.r43</file>
++       <file>$PROJ_DIR$\..\Application\DebugUart.h</file>
++       <file>$PROJ_DIR$\..\Application\Utilities.h</file>
++       <file>$PROJ_DIR$\..\Application\Icons.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_boot.h</file>
++       <file>$TOOLKIT_DIR$\inc\msp430.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_crystal_timers.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.h</file>
++       <file>$PROJ_DIR$\..\Application\TestMode.h</file>
++       <file>$PROJ_DIR$\..\Application\LcdDriver.h</file>
++       <file>$PROJ_DIR$\..\Application\Vibration.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\HAL_TLV.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\HAL_UCS.r43</file>
++       <file>$TOOLKIT_DIR$\inc\msp430f5438a.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\HAL_FLASH.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\HAL_PMAP.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\HAL_PMM.r43</file>
++       <file>$PROJ_DIR$\Gen1\Exe\Watch.ulp</file>
++       <file>$PROJ_DIR$\Gen1\Obj\portext_s43.r43</file>
++       <file>$PROJ_DIR$\..\Hardware\OledDriver.h</file>
++       <file>$PROJ_DIR$\..\Application\OledFonts.h</file>
++       <file>$PROJ_DIR$\..\Application\Adc.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_oled.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_analog_display.h</file>
++       <file>$PROJ_DIR$\..\..\Patch\Patch_PAN1315.h</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\Stack1.r43</file>
++       <file>$PROJ_DIR$\Gen1\List\gen1.map</file>
++       <file>$PROJ_DIR$\Gen1\Obj\BufferPool.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\LcdDriver.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\OneSecondTimers.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Statistics.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\DebugUart.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_oled.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\PatchSelection.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_vibe.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\MSP430FlashUtil.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\OSAL_Nv.r43</file>
++       <file>$PROJ_DIR$\Gen1\Exe\gen1.d43</file>
++       <file>$PROJ_DIR$\..\Application\PreInclude.h</file>
++       <file>$PROJ_DIR$\..\Application\SerialRam.c</file>
+        <file>$PROJ_DIR$\..\Application\Statistics.c</file>
+        <file>$PROJ_DIR$\..\Application\TestMode.c</file>
++       <file>$PROJ_DIR$\..\Application\Utilities.c</file>
++       <file>$PROJ_DIR$\..\Application\Vibration.c</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\include\FreeRTOS.h</file>
+        <file>$PROJ_DIR$\..\Application\main.c</file>
+        <file>$PROJ_DIR$\..\Application\MessageInfo.h</file>
+        <file>$PROJ_DIR$\..\Application\MessageQueues.c</file>
+        <file>$PROJ_DIR$\..\Application\Messages.h</file>
++       <file>$PROJ_DIR$\..\Application\OledDisplay.c</file>
++       <file>$PROJ_DIR$\..\Application\OledFonts.c</file>
+        <file>$PROJ_DIR$\..\Application\OneSecondTimers.c</file>
+        <file>$PROJ_DIR$\..\Application\Adc.c</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_analog_display.r43</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_oled.c</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtc.c</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.c</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_vibe.c</file>
++       <file>$PROJ_DIR$\..\Hardware\OledDriver.c</file>
++       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.c</file>
++       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.c</file>
++       <file>$PROJ_DIR$\..\..\OSAL\NvIds.h</file>
++       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.c</file>
++       <file>$PROJ_DIR$\..\Application\Accelerometer.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_accelerometer.r43</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\Wrapper.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Adc.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Accelerometer.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\BitmapData.r43</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
++       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.h</file>
++       <file>$PROJ_DIR$\..\Application\Statistics.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\string.h</file>
++       <file>$PROJ_DIR$\..\Application\LcdDisplay.h</file>
++       <file>$PROJ_DIR$\..\Application\IdleTask.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_boot.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_clock_control.r43</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\stdio.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_clock_control.h</file>
++       <file>$TOOLKIT_DIR$\inc\in430.h</file>
++       <file>$PROJ_DIR$\..\Application\Display.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\MessageQueues.r43</file>
++       <file>$PROJ_DIR$\..\Application\OneSecondTimers.h</file>
++       <file>$PROJ_DIR$\..\Application\BufferPool.h</file>
++       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
++       <file>$PROJ_DIR$\..\Application\SerialRam.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.h</file>
++       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.h</file>
++       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.r43</file>
++       <file>$PROJ_DIR$\LinkerConfiguration.xcl</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_battery.h</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libBluetopia.a</file>
++       <file>$PROJ_DIR$\..\..\..\..\..\..\[ROOT_NODE]</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Display.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\LcdDisplay.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Icons.r43</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_io_macros.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_accelerometer.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\main.r43</file>
++       <file>$PROJ_DIR$\..\Application\Accelerometer.c</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Lowinit.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_rtos_timer.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_rtc.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\TestMode.r43</file>
++       <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Buttons.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Utilities.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Vibration.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\Fonts.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\IdleTask.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\port.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\tasks.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\heap_4.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\queue.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\list.r43</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\stddef.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_digital_v2_defs.h</file>
++       <file>$PROJ_DIR$\..\Application\BitmapData.h</file>
++       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_lcd.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\croutine.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_miscellaneous.r43</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_board_type.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\OledDriver.r43</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_lpm.h</file>
++       <file>$PROJ_DIR$\..\Application\Fonts.h</file>
++       <file>$PROJ_DIR$\..\Application\Buttons.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\ystdio.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_vibe.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtc.h</file>
++       <file>$PROJ_DIR$\..\Application\MessageQueues.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\list.h</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\include\mpu_wrappers.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\portable.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\projdefs.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\queue.h</file>
+***************
+*** 39,52 ****
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\StackMacros.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\task.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\TaskTCB.h</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\FreeRTOSConfig.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portmacro.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\list.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\queue.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</file>
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</file>
+--- 154,181 ----
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\StackMacros.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\task.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\TaskTCB.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</file>
++       <file>$PROJ_DIR$\Gen1\Obj\hal_battery.r43</file>
++       <file>$PROJ_DIR$\Gen1\Obj\OledFonts.r43</file>
++       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_calibration.h</file>
++       <file>$PROJ_DIR$\Gen1\Obj\SerialRam.r43</file>
++       <file>$PROJ_DIR$\..\Application\BufferPool.c</file>
++       <file>$PROJ_DIR$\..\Application\Buttons.c</file>
++       <file>$PROJ_DIR$\..\Application\DebugUart.c</file>
++       <file>$PROJ_DIR$\..\Application\Display.c</file>
++       <file>$PROJ_DIR$\..\Application\Fonts.c</file>
++       <file>$PROJ_DIR$\..\Application\Icons.c</file>
++       <file>$PROJ_DIR$\..\Application\IdleTask.c</file>
++       <file>$PROJ_DIR$\..\Application\LcdDisplay.c</file>
++       <file>$PROJ_DIR$\..\Application\LcdDriver.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\FreeRTOSConfig.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\list.c</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portmacro.h</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\queue.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</file>
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</file>
+***************
+*** 58,492 ****
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.c</file>
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.h</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_accelerometer.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_battery.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_analog_display.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_boot.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_calibration.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_clock_control.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_lpm.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_oled.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtc.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_vibe.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\OledDriver.c</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.c</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\NvIds.h</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.c</file>
+-       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.c</file>
+-       <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\include\mpu_wrappers.h</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\include\FreeRTOS.h</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Buttons.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\DebugUart.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Fonts.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Icons.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Display.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\IdleTask.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\MessageQueues.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\OledDisplay.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\LcdDisplay.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\LcdDriver.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\main.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\OledFonts.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\SerialRam.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Lowinit.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\croutine.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\OneSecondTimers.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Statistics.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\TestMode.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Utilities.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Vibration.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\heap_4.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\tasks.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\port.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\queue.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\list.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\HAL_FLASH.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\HAL_TLV.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\HAL_UCS.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\HAL_PMAP.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\HAL_PMM.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_accelerometer.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_battery.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_analog_display.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_calibration.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_lpm.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_boot.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_clock_control.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_miscellaneous.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\OledDriver.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_oled.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_rtos_timer.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_rtc.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\PatchSelection.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\hal_vibe.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\MSP430FlashUtil.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\OSAL_Nv.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Exe\gen1.d43</file>
+-       <file>$PROJ_DIR$\Gen1\Exe\Watch.ulp</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\portext_s43.r43</file>
+-       <file>$PROJ_DIR$\..\Hardware\OledDriver.h</file>
+-       <file>$PROJ_DIR$\..\Application\OledFonts.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_oled.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_analog_display.h</file>
+-       <file>$PROJ_DIR$\..\..\Patch\Patch_PAN1315.h</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\Stack1.r43</file>
+-       <file>$PROJ_DIR$\Gen1\List\gen1.map</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\BufferPool.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Adc.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\Accelerometer.r43</file>
+-       <file>$PROJ_DIR$\Gen1\Obj\BitmapData.r43</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+-       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.h</file>
+-       <file>$PROJ_DIR$\..\Application\Statistics.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\string.h</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDisplay.h</file>
+-       <file>$PROJ_DIR$\..\Application\IdleTask.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+-       <file>$PROJ_DIR$\..\Application\Adc.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\stddef.h</file>
+-       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+-       <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+-       <file>$TOOLKIT_DIR$\inc\msp430f5438a.h</file>
+-       <file>$TOOLKIT_DIR$\inc\in430.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_accelerometer.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_digital_v2_defs.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_board_type.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_io_macros.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_lcd.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtc.h</file>
+-       <file>$PROJ_DIR$\..\Application\MessageQueues.h</file>
+-       <file>$PROJ_DIR$\..\Application\DebugUart.h</file>
+-       <file>$PROJ_DIR$\..\Application\Utilities.h</file>
+-       <file>$PROJ_DIR$\..\Application\Accelerometer.h</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\Wrapper.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_calibration.h</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.h</file>
+-       <file>$PROJ_DIR$\..\Application\Display.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\stdio.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_clock_control.h</file>
+-       <file>$PROJ_DIR$\..\Application\OneSecondTimers.h</file>
+-       <file>$PROJ_DIR$\..\Application\BufferPool.h</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.h</file>
+-       <file>$PROJ_DIR$\..\Application\BitmapData.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_lpm.h</file>
+-       <file>$PROJ_DIR$\..\Application\Fonts.h</file>
+-       <file>$PROJ_DIR$\..\Application\Buttons.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\ystdio.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_vibe.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_crystal_timers.h</file>
+-       <file>$PROJ_DIR$\..\Application\Icons.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_boot.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.h</file>
+-       <file>$PROJ_DIR$\..\Application\TestMode.h</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDriver.h</file>
+-       <file>$PROJ_DIR$\..\Application\Vibration.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+-       <file>$PROJ_DIR$\..\Application\SerialRam.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.h</file>
+-       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.h</file>
+-       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.r43</file>
+-       <file>$PROJ_DIR$\LinkerConfiguration.xcl</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_battery.h</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libBluetopia.a</file>
+      </outputs>
+      <file>
+-       <name>$PROJ_DIR$\..\Application\Buttons.c</name>
+        <outputs>
+          <tool>
+-           <name>ICC430</name>
+-           <file> 71</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 28 29 18 153 169 151 152 150 154 173 171 156 159 157 155 162 165 135</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Vibration.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 90</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 28 18 153 155 151 152 150 173 154 156 135 157</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Utilities.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 89</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 28 151 152 150 187 169 18 153 155 156 157 136 65 167</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Statistics.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 87</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 18 153 133 156 159</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\TestMode.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 88</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 163 139 140 131 132 142 137 141 143 172 134 151 146 147 148 145 152 150 169 177 160 70 144 27 35 26 39 69 28 25 18 153 155 156 159 178</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Accelerometer.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 129</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 134 139 140 131 132 142 137 141 143 70 144 27 35 145 146 147 148 26 39 69 31 25 28 29 151 152 150 149 18 153 154 155 156 157 158 159</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\BufferPool.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 127</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 28 25 31 151 152 150 169 18 153 155 166 133 156 136</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\OledFonts.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 82</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 121 156</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\LcdDriver.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 80</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 151 152 150 164 153 18 156 179 135</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\main.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 81</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 29 28 25 31 18 153 155 166 169 151 152 150 154 177 187 160 164 176 156 138 159 171 135 162 157 158 180 165 133 136 178 167 65</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\DebugUart.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 72</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 29 28 25 18 153 151 152 150 164 154 169 187 156 133 31 157 178</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\OledDisplay.c</name>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 28 18 153 155 154 123 151 152 150 169 187 174 122</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\MessageQueues.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 77</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 28 25 31 151 152 150 18 153 166 155 11 156 133 136</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\BitmapData.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 130</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 167 168 153</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Icons.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 74</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 175</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\LcdDisplay.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 79</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 134 139 140 131 132 142 137 141 143 163 172 181 70 144 27 35 145 146 147 148 26 39 69 31 25 28 161 18 153 155 151 152 150 160 154 187 169 177 164 174 176 156 157 179 159 165 138 158 171 133 167 180 65 162 182 175 170 135 168 136 178</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Display.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 75</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 28 25 18 153 155 156 162 167 65 159 165</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\IdleTask.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 76</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 28 18 153 155 169 151 152 150 177 160 176 156 159 157 136 167 65</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Fonts.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 73</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 170 156</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\OneSecondTimers.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 86</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 28 29 151 152 150 164 18 153 155 156 157 165</file>
+          </tool>
+        </inputs>
+      </file>
+--- 187,226 ----
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.c</file>
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.h</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_accelerometer.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_analog_display.c</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_battery.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_boot.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_calibration.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_clock_control.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_lpm.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</file>
++       <file>$PROJ_DIR$\..\Application\BitmapData.c</file>
+      </outputs>
+      <file>
++       <name>[ROOT_NODE]</name>
+        <outputs>
+          <tool>
++           <name>XLINK</name>
++           <file> 42 31</file>
++         </tool>
++         <tool>
++           <name>ULP430</name>
++           <file> 18</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\Gen1\Exe\gen1.d43</name>
++       <outputs>
++         <tool>
++           <name>XLINK</name>
++           <file> 31</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
++           <name>XLINK</name>
++           <file> 96 111 30 98 72 71 73 32 112 36 100 115 15 16 17 12 13 102 116 101 33 107 40 87 41 34 38 154 110 113 114 128 69 150 81 1 82 0 129 109 108 39 119 121 105 117 19 120 118 95</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 495,807 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 83</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 7 134 139 140 131 132 142 137 141 143 70 144 27 35 145 146 147 148 26 39 69 31 25 28 29 151 152 150 164 187 153 18 155 156 182 179 162 135 157 138 167 168 159</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
+-       <name>$PROJ_DIR$\..\Application\Adc.c</name>
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 128</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 7 151 146 147 148 145 152 150 70 144 139 140 131 132 142 137 141 143 27 35 26 39 69 31 25 29 28 164 187 160 18 153 155 156 157 138 162 167 65</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
+-       <name>$PROJ_DIR$\..\..\..\..\..\..\[ROOT_NODE]</name>
+-       <outputs>
+-         <tool>
+-           <name>XLINK</name>
+-           <file> 117 126</file>
+-         </tool>
+-         <tool>
+-           <name>ULP430</name>
+-           <file> 118</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</name>
+-       <outputs>
+-         <tool>
+-           <name>A430</name>
+-           <file> 119</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>A430</name>
+-           <file> 146 147</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 91</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 181 139 140 131 132 142 137 141 143 70 144 27 35 145 146 147 148 26 39 69 31 25</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 84</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 93</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 183</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 85</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\list.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 95</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\queue.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 94</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 92</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 163 139 140 131 132 142 137 141 143 172 181 134 32 70 144 27 35 145 146 147 148 26 39 69 31 25 30</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 96</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMAP.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 99</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMM.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 100</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 146 147 148 145 47 44</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_TLV.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 97</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 98</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 146 147 148 145 50 44 160</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_accelerometer.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 101</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_battery.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 102</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 151 152 150 187 156 162 138</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_analog_display.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 103</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 151 146 147 148 145 152 150 123 169</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_boot.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 106</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 146 147 148 145 176</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_calibration.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 104</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 146 147 148 145 160</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_clock_control.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 107</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 39 151 146 147 148 145 152 150 177</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_lpm.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 105</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 39 145 151 146 147 148 152 150 183 169 177 50 44 18 153 179</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 108</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 35 145 146 147 148 39 151 152 150 177 47 44 50</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_oled.c</name>
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+--- 229,261 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 154</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 43 77 23 24 74 75 26 80 25 123 49 122 142 164 126 6 14 85 141 168 140 146 139 143 144 130 103 124 84 97 127 53 138 2 92 10 86 78 3 22 90 125 70</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
++       <name>$PROJ_DIR$\..\Application\Statistics.c</name>
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 35</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 53 127 76 2 70</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
++       <name>$PROJ_DIR$\..\Application\TestMode.c</name>
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+***************
+*** 811,900 ****
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 31 25 151 152 150 122 164 156</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_rtc.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 112</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 28 25 31 18 153 155 151 152 150 154 169 160 156 157 133 165 159 180 135</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_rtos_timer.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 111</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 151 152 150 183 174 169 156</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_vibe.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 114</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\OledDriver.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 109</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 70 144 139 140 131 132 142 137 141 143 27 35 145 146 147 148 26 39 69 151 152 150 164 18 153 156 122 120</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 115</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 7 151 146 147 148 145 152 150 70 144 139 140 131 132 142 137 141 143 27 35 26 39 69 159 161</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 116</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\Patch\PatchSelection.c</name>
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+--- 265,276 ----
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 43 83 23 24 74 75 26 80 25 123 135 77 130 6 14 85 126 103 124 132 8 153 49 122 142 164 141 168 140 143 139 53 127 138 2 70 9</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
++       <name>$PROJ_DIR$\..\Application\Utilities.c</name>
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+***************
+*** 904,925 ****
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 7 138 184 124</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
+-       <name>$PROJ_DIR$\Gen1\Exe\gen1.d43</name>
+        <outputs>
+          <tool>
+-           <name>XLINK</name>
+-           <file> 126</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>XLINK</name>
+-           <file> 186 68 125 188 129 128 130 127 71 72 75 73 96 99 100 97 98 74 76 79 80 84 115 77 116 86 113 83 88 89 90 85 101 102 106 104 107 105 108 112 111 114 91 95 81 93 119 94 92 185</file>
+          </tool>
+        </inputs>
+      </file>
+--- 280,938 ----
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 143 130 103 124 97 132 53 127 138 2 3 79 66 90</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
++       <name>$PROJ_DIR$\..\Application\Vibration.c</name>
+        <outputs>
+          <tool>
++           <name>ICC430</name>
++           <file> 114</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 143 53 127 138 130 103 124 136 137 2 78 3</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\main.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 105</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 144 143 139 146 53 127 138 89 132 130 103 124 137 8 97 153 84 5 2 22 70 134 78 86 3 68 11 88 76 79 9 90 66</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\MessageQueues.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 87</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 143 139 146 130 103 124 53 127 89 138 51 2 76 79</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\OledDisplay.c</name>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 143 53 127 138 137 28 130 103 124 132 97 7 27</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\OledFonts.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 151</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 21 2</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\OneSecondTimers.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 34</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 143 144 130 103 124 84 53 127 138 2 3 88</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Adc.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 71</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 130 6 14 85 126 103 124 49 122 23 24 74 75 26 80 25 123 142 164 141 168 140 146 139 144 143 84 97 153 53 127 138 2 3 22 86 90 66</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_oled.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 37</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 130 103 124 27 84 2</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_rtc.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 109</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 143 139 146 53 127 138 130 103 124 137 132 153 2 3 76 88 70 11 78</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_rtos_timer.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 108</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 130 103 124 93 7 132 2</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_vibe.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 39</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\OledDriver.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 131</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 130 103 124 84 53 127 2 27 20</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 40</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 130 6 14 85 126 103 124 49 122 23 24 74 75 26 80 25 123 142 164 141 168 140 70 152</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 41</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\Patch\PatchSelection.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 38</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 22 94 29</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\..\..\..\..\[ROOT_NODE]</name>
++       <outputs>
++         <tool>
+            <name>XLINK</name>
++           <file> 42 31</file>
++         </tool>
++         <tool>
++           <name>ULP430</name>
++           <file> 18</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Accelerometer.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 72</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 77 23 24 74 75 26 80 25 123 49 122 142 164 126 6 14 85 141 168 140 146 139 143 144 130 103 124 104 53 127 137 138 2 3 68 70</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 119</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 91 23 24 74 75 26 80 25 123 49 122 142 164 126 6 14 85 141 168 140 146 139</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</name>
++       <outputs>
++         <tool>
++           <name>A430</name>
++           <file> 19</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>A430</name>
++           <file> 6 14</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\BufferPool.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 32</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 143 139 146 130 103 124 132 53 127 138 89 76 2 79</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Buttons.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 112</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 143 144 53 127 132 130 103 124 137 136 134 2 70 3 138 86 88 78</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\DebugUart.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 36</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 144 143 139 53 127 130 103 124 84 137 132 97 2 76 146 3 9</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Display.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 100</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 143 139 53 127 138 2 86 90 66 70 88</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Fonts.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 115</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 133 2</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Icons.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 102</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 4</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\IdleTask.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 116</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 143 53 127 138 132 130 103 124 8 153 5 2 70 3 79 90 66</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\LcdDisplay.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 101</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 77 23 24 74 75 26 80 25 123 83 135 91 49 122 142 164 126 6 14 85 141 168 140 146 139 143 152 53 127 138 130 103 124 153 137 97 132 8 84 7 5 2 3 10 70 88 22 68 134 76 90 11 66 86 92 4 133 78 125 79 9</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\LcdDriver.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 33</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 130 103 124 84 127 53 2 10 78</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 107</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 117</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 93</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\list.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 121</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 128</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\queue.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 120</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 118</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 83 23 24 74 75 26 80 25 123 135 91 77 147 49 122 142 164 126 6 14 85 141 168 140 146 139 145</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 15</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMAP.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 16</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMM.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 17</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 6 14 85 126 176 173</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_TLV.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 12</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 13</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 6 14 85 126 179 173 153</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_accelerometer.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 69</file>
++         </tool>
++       </outputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_analog_display.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 58</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 130 6 14 85 126 103 124 28 132</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_battery.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 150</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 49 122 23 24 74 75 26 80 25 123 142 164 126 6 14 85 141 168 140 146 139 130 103 124 97 2 86 22</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_boot.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 81</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 6 14 85 126 5</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_calibration.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 1</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 6 14 85 126 153</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_clock_control.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 82</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 168 130 6 14 85 126 103 124 8</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_lpm.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 0</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 168 126 130 6 14 85 103 124 93 132 8 179 173 53 127 10</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 129</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 164 126 6 14 85 168 130 103 124 8 176 173 179</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\BitmapData.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 73</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 43 90 125 127</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 931,961 ****
+    <configuration>
+      <name>Gen2</name>
+      <outputs>
+-       <file>$PROJ_DIR$\..\Application\Buttons.c</file>
+-       <file>$PROJ_DIR$\..\Application\Vibration.c</file>
+-       <file>$PROJ_DIR$\..\Application\Utilities.c</file>
+        <file>$PROJ_DIR$\..\Application\Statistics.c</file>
+        <file>$PROJ_DIR$\..\Application\TestMode.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\croutine.h</file>
+-       <file>$PROJ_DIR$\..\Application\Accelerometer.c</file>
+-       <file>$PROJ_DIR$\..\Application\BufferPool.c</file>
+-       <file>$PROJ_DIR$\..\Application\PreInclude.h</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDriver.c</file>
+        <file>$PROJ_DIR$\..\Application\main.c</file>
+        <file>$PROJ_DIR$\..\Application\MessageInfo.h</file>
+-       <file>$PROJ_DIR$\..\Application\DebugUart.c</file>
+        <file>$PROJ_DIR$\..\Application\MessageQueues.c</file>
+-       <file>$PROJ_DIR$\..\Application\BitmapData.c</file>
+-       <file>$PROJ_DIR$\..\Application\Icons.c</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDisplay.c</file>
+        <file>$PROJ_DIR$\..\Application\Messages.h</file>
+-       <file>$PROJ_DIR$\..\Application\Display.c</file>
+-       <file>$PROJ_DIR$\..\Application\IdleTask.c</file>
+-       <file>$PROJ_DIR$\..\Application\Fonts.c</file>
+        <file>$PROJ_DIR$\..\Application\OneSecondTimers.c</file>
+-       <file>$PROJ_DIR$\..\Application\SerialRam.c</file>
+        <file>$PROJ_DIR$\..\Application\Adc.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\list.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\portable.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\projdefs.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\queue.h</file>
+--- 944,1184 ----
+    <configuration>
+      <name>Gen2</name>
+      <outputs>
++       <file>$PROJ_DIR$\..\Application\DebugUart.h</file>
++       <file>$PROJ_DIR$\..\Application\Utilities.h</file>
++       <file>$PROJ_DIR$\..\Application\Icons.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_boot.h</file>
++       <file>$TOOLKIT_DIR$\inc\msp430.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_crystal_timers.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.h</file>
++       <file>$PROJ_DIR$\..\Application\TestMode.h</file>
++       <file>$PROJ_DIR$\..\Application\LcdDriver.h</file>
++       <file>$PROJ_DIR$\..\Application\Vibration.h</file>
++       <file>$TOOLKIT_DIR$\inc\msp430f5438a.h</file>
++       <file>$PROJ_DIR$\..\Hardware\OledDriver.h</file>
++       <file>$PROJ_DIR$\..\Application\Adc.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_analog_display.h</file>
++       <file>$PROJ_DIR$\Gen2\Obj\MSP430FlashUtil.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_rtc.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_rtos_timer.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\OSAL_Nv.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Accelerometer.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\portext_s43.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_miscellaneous.r43</file>
++       <file>$PROJ_DIR$\Gen2\Exe\gen2.d43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\BitmapData.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\PatchSelection.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_calibration.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Accelerometer.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\LcdDisplay.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\DebugUart.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_rtc.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\MSP430FlashUtil.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_clock_control.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_vibe.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_rtos_timer.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_accelerometer.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_lpm.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_UCS.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_PMM.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\TestMode.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\BufferPool.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Fonts.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Statistics.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\SerialRam.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\MessageQueues.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\main.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\LcdDriver.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Display.pbi</file>
++       <file>$PROJ_DIR$\..\Application\PreInclude.h</file>
++       <file>$PROJ_DIR$\..\Application\SerialRam.c</file>
+        <file>$PROJ_DIR$\..\Application\Statistics.c</file>
+        <file>$PROJ_DIR$\..\Application\TestMode.c</file>
++       <file>$PROJ_DIR$\..\Application\Utilities.c</file>
++       <file>$PROJ_DIR$\..\Application\Vibration.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\croutine.h</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\include\FreeRTOS.h</file>
+        <file>$PROJ_DIR$\..\Application\main.c</file>
+        <file>$PROJ_DIR$\..\Application\MessageInfo.h</file>
+        <file>$PROJ_DIR$\..\Application\MessageQueues.c</file>
+        <file>$PROJ_DIR$\..\Application\Messages.h</file>
++       <file>$PROJ_DIR$\..\Application\OledDisplay.c</file>
++       <file>$PROJ_DIR$\..\Application\OledFonts.c</file>
+        <file>$PROJ_DIR$\..\Application\OneSecondTimers.c</file>
+        <file>$PROJ_DIR$\..\Application\Adc.c</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtc.c</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.c</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_vibe.c</file>
++       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.c</file>
++       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.c</file>
++       <file>$PROJ_DIR$\..\..\OSAL\NvIds.h</file>
++       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.c</file>
++       <file>$PROJ_DIR$\..\Application\Accelerometer.h</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\Wrapper.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
++       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.h</file>
++       <file>$PROJ_DIR$\..\Application\Statistics.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\string.h</file>
++       <file>$PROJ_DIR$\..\Application\LcdDisplay.h</file>
++       <file>$PROJ_DIR$\..\Application\IdleTask.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_miscellaneous.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Adc.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\heap_4.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_boot.r43</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_rtos_timer.lst</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Icons.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_FLASH.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_PMAP.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_battery.r43</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\Stack.r43</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_rtc.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\heap_4.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\main.lst</file>
++       <file>$PROJ_DIR$\Gen2\Obj\list.r43</file>
++       <file>$PROJ_DIR$\Gen2\List\gen2.map</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_TLV.r43</file>
++       <file>$PROJ_DIR$\Gen2\Exe\Watch.ulp</file>
++       <file>$PROJ_DIR$\Gen2\Obj\queue.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Fonts.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\heap_4.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\croutine.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\MessageQueues.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\TestMode.r43</file>
++       <file>$PROJ_DIR$\..\..\Patch\Patch_PAN1316.h</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Statistics.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\LcdDisplay.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\IdleTask.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\LcdDriver.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\port.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\DebugUart.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Display.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\BufferPool.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Icons.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\main.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Vibration.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Utilities.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\OneSecondTimers.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\SerialRam.r43</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libSS1BTGAT.a</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Buttons.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Lowinit.r43</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libSS1BTMAP.a</file>
++       <file>$PROJ_DIR$\Gen2\Obj\tasks.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Utilities.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\BitmapData.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Vibration.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\port.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Buttons.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Lowinit.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_FLASH.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\list.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_PMAP.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\croutine.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\queue.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\OSAL_Nv.r43</file>
++       <file>$PROJ_DIR$\Gen2\Obj\OneSecondTimers.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\IdleTask.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Adc.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_TLV.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_PMM.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Watch.pbd</file>
++       <file>$PROJ_DIR$\Gen2\Obj\HAL_UCS.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_accelerometer.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_battery.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_boot.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_calibration.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_clock_control.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_lpm.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\PatchSelection.pbi</file>
++       <file>$PROJ_DIR$\..\Application\OledDisplay.h</file>
++       <file>$PROJ_DIR$\..\Application\Background.c</file>
++       <file>$PROJ_DIR$\..\Application\Background.h</file>
++       <file>$PROJ_DIR$\Gen2\Obj\tasks.pbi</file>
++       <file>$PROJ_DIR$\Gen2\Obj\Background.pbi</file>
++       <file>$PROJ_DIR$\Gen2\List\HAL_TLV.lst</file>
++       <file>$PROJ_DIR$\Gen2\Obj\hal_vibe.pbi</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\stdio.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_clock_control.h</file>
++       <file>$TOOLKIT_DIR$\inc\in430.h</file>
++       <file>$PROJ_DIR$\..\Application\Display.h</file>
++       <file>$PROJ_DIR$\..\Application\OneSecondTimers.h</file>
++       <file>$PROJ_DIR$\..\Application\BufferPool.h</file>
++       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
++       <file>$PROJ_DIR$\..\Application\SerialRam.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.h</file>
++       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.h</file>
++       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.r43</file>
++       <file>$PROJ_DIR$\LinkerConfiguration.xcl</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_battery.h</file>
++       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libBluetopia.a</file>
++       <file>$PROJ_DIR$\..\..\..\..\..\..\[ROOT_NODE]</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_io_macros.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_accelerometer.h</file>
++       <file>$PROJ_DIR$\Gen2\List\BitmapData.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_lpm.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\croutine.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_battery.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\IdleTask.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\LcdDisplay.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\OSAL_Nv.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Statistics.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_clock_control.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Vibration.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\tasks.lst</file>
++       <file>$PROJ_DIR$\..\Application\Accelerometer.c</file>
++       <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\stddef.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_digital_v2_defs.h</file>
++       <file>$PROJ_DIR$\..\Application\BitmapData.h</file>
++       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_lcd.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_board_type.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_lpm.h</file>
++       <file>$PROJ_DIR$\..\Application\Fonts.h</file>
++       <file>$PROJ_DIR$\..\Application\Buttons.h</file>
++       <file>$TOOLKIT_DIR$\inc\dlib\c\ystdio.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_vibe.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_rtc.h</file>
++       <file>$PROJ_DIR$\..\Application\MessageQueues.h</file>
++       <file>$PROJ_DIR$\Gen2\List\MessageQueues.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\MSP430FlashUtil.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\SerialRam.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\HAL_UCS.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Utilities.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Lowinit.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Adc.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_calibration.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\OneSecondTimers.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\list.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_accelerometer.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\HAL_FLASH.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_boot.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\PatchSelection.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\BufferPool.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Fonts.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\LcdDriver.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Icons.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\TestMode.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\HAL_PMM.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Display.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\DebugUart.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\HAL_PMAP.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\port.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\queue.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_vibe.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Buttons.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\Accelerometer.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\hal_miscellaneous.lst</file>
++       <file>$PROJ_DIR$\Gen2\List\portext_s43.lst</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\list.h</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\include\mpu_wrappers.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\portable.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\projdefs.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\queue.h</file>
+***************
+*** 963,976 ****
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\StackMacros.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\task.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\TaskTCB.h</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\FreeRTOSConfig.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portmacro.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\list.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\queue.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</file>
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</file>
+--- 1186,1210 ----
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\StackMacros.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\task.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\include\TaskTCB.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</file>
++       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.h</file>
++       <file>$PROJ_DIR$\..\Hardware\hal_calibration.h</file>
++       <file>$PROJ_DIR$\..\Application\BufferPool.c</file>
++       <file>$PROJ_DIR$\..\Application\Buttons.c</file>
++       <file>$PROJ_DIR$\..\Application\DebugUart.c</file>
++       <file>$PROJ_DIR$\..\Application\Display.c</file>
++       <file>$PROJ_DIR$\..\Application\Fonts.c</file>
++       <file>$PROJ_DIR$\..\Application\Icons.c</file>
++       <file>$PROJ_DIR$\..\Application\IdleTask.c</file>
++       <file>$PROJ_DIR$\..\Application\LcdDisplay.c</file>
++       <file>$PROJ_DIR$\..\Application\LcdDriver.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\FreeRTOSConfig.h</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\list.c</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portmacro.h</file>
++       <file>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\queue.c</file>
+        <file>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</file>
+        <file>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</file>
+***************
+*** 991,1386 ****
+        <file>$PROJ_DIR$\..\Hardware\hal_clock_control.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_lpm.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtc.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.c</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_vibe.c</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.c</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\NvIds.h</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.c</file>
+-       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.c</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Adc.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_miscellaneous.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\OSAL_Nv.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\portext_s43.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Exe\gen2.d43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\BitmapData.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Accelerometer.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\PatchSelection.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_rtc.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\MSP430FlashUtil.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_clock_control.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_vibe.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_rtos_timer.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_accelerometer.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_lpm.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\HAL_UCS.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\HAL_PMM.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_calibration.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_boot.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\HAL_FLASH.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\HAL_PMAP.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\hal_battery.r43</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\Stack.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\list.r43</file>
+-       <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\HAL_TLV.r43</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\include\mpu_wrappers.h</file>
+-       <file>$PROJ_DIR$\..\..\FreeRTOS\include\FreeRTOS.h</file>
+-       <file>$PROJ_DIR$\Gen2\Exe\Watch.ulp</file>
+-       <file>$PROJ_DIR$\..\..\..\..\..\..\[ROOT_NODE]</file>
+-       <file>$PROJ_DIR$\Gen2\List\gen2.map</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+-       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.h</file>
+-       <file>$PROJ_DIR$\..\Application\Statistics.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\string.h</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDisplay.h</file>
+-       <file>$PROJ_DIR$\..\Application\IdleTask.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\queue.r43</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\heap_4.r43</file>
+-       <file>$PROJ_DIR$\..\Application\Adc.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\stddef.h</file>
+-       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+-       <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+-       <file>$TOOLKIT_DIR$\inc\msp430f5438a.h</file>
+-       <file>$TOOLKIT_DIR$\inc\in430.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_accelerometer.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_digital_v2_defs.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_board_type.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_io_macros.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_lcd.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtc.h</file>
+-       <file>$PROJ_DIR$\..\Application\MessageQueues.h</file>
+-       <file>$PROJ_DIR$\..\Application\DebugUart.h</file>
+-       <file>$PROJ_DIR$\..\Application\Utilities.h</file>
+-       <file>$PROJ_DIR$\..\Application\Accelerometer.h</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\Wrapper.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_calibration.h</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\MSP430FlashUtil.h</file>
+-       <file>$PROJ_DIR$\..\Application\Display.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\stdio.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_clock_control.h</file>
+-       <file>$PROJ_DIR$\..\Application\OneSecondTimers.h</file>
+-       <file>$PROJ_DIR$\..\Application\BufferPool.h</file>
+-       <file>$PROJ_DIR$\..\..\OSAL\OSAL_Nv.h</file>
+-       <file>$PROJ_DIR$\..\Application\BitmapData.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_lpm.h</file>
+-       <file>$PROJ_DIR$\..\Application\Fonts.h</file>
+-       <file>$PROJ_DIR$\..\Application\Buttons.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\ystdio.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_vibe.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_crystal_timers.h</file>
+-       <file>$PROJ_DIR$\..\Application\Icons.h</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_boot.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\croutine.r43</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.h</file>
+-       <file>$PROJ_DIR$\..\Application\TestMode.h</file>
+-       <file>$PROJ_DIR$\..\Application\LcdDriver.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\MessageQueues.r43</file>
+-       <file>$PROJ_DIR$\..\Application\Vibration.h</file>
+-       <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Fonts.r43</file>
+-       <file>$PROJ_DIR$\..\Application\SerialRam.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\TestMode.r43</file>
+-       <file>$PROJ_DIR$\..\..\Patch\Patch_PAN1316.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Statistics.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\LcdDisplay.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\IdleTask.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\LcdDriver.r43</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_rtos_timer.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\port.r43</file>
+-       <file>$PROJ_DIR$\..\..\Patch\PatchSelection.h</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\DebugUart.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Display.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\BufferPool.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Icons.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\main.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Vibration.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Utilities.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\OneSecondTimers.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\SerialRam.r43</file>
+-       <file>$TOOLKIT_DIR$\lib\dlib\dl430xmfn.r43</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libSS1BTGAT.a</file>
+-       <file>$PROJ_DIR$\LinkerConfiguration.xcl</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Buttons.r43</file>
+-       <file>$PROJ_DIR$\..\Hardware\hal_battery.h</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libSS1BTMAP.a</file>
+-       <file>$PROJ_DIR$\..\..\Stack\Api\IAR\libBluetopia.a</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\Lowinit.r43</file>
+-       <file>$PROJ_DIR$\Gen2\Obj\tasks.r43</file>
+      </outputs>
+      <file>
+-       <name>$PROJ_DIR$\..\Application\Buttons.c</name>
+        <outputs>
+          <tool>
+-           <name>ICC430</name>
+-           <file> 176</file>
+          </tool>
+        </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 27 28 17 122 138 120 121 119 123 142 140 125 128 126 124 131 134 102</file>
+-         </tool>
+-       </inputs>
+      </file>
+      <file>
+-       <name>$PROJ_DIR$\..\Application\Vibration.c</name>
+        <outputs>
+          <tool>
+-           <name>ICC430</name>
+-           <file> 169</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 27 17 122 124 120 121 119 142 123 125 102 126</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Utilities.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 170</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 27 120 121 119 177 138 17 122 124 125 126 103 64 136</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Statistics.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 157</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 17 122 100 125 128</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\TestMode.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 155</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 132 108 109 98 99 111 105 110 112 141 101 120 115 116 117 114 121 119 138 147 129 94 113 26 34 25 38 93 27 24 17 122 124 125 128 148</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Accelerometer.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 73</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 101 108 109 98 99 111 105 110 112 94 113 26 34 114 115 116 117 25 38 93 30 24 27 28 120 121 119 118 17 122 123 124 125 126 127 128</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\BufferPool.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 166</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 27 24 30 120 121 119 138 17 122 124 135 100 125 103</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\LcdDriver.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 160</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 120 121 119 133 122 17 125 149 102</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\main.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 168</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 28 27 24 30 17 122 124 135 138 120 121 119 123 147 177 129 133 145 125 107 128 140 102 131 126 127 151 134 100 103 148 136 64</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\DebugUart.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 164</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 28 27 24 17 122 120 121 119 133 123 138 177 125 100 30 126 148</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\MessageQueues.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 150</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 27 24 30 120 121 119 17 122 135 124 11 125 100 103</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\BitmapData.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 72</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 136 137 122</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Icons.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 167</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 144</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\LcdDisplay.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 158</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 101 108 109 98 99 111 105 110 112 132 141 152 94 113 26 34 114 115 116 117 25 38 93 30 24 27 130 17 122 124 120 121 119 129 123 177 138 147 133 143 145 125 126 149 128 134 107 127 140 100 136 151 64 131 154 144 139 102 137 103 148</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Display.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 165</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 27 24 17 122 124 125 131 136 64 128 134</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\IdleTask.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 159</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 27 17 122 124 138 120 121 119 147 129 145 125 128 126 103 136 64</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\Fonts.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 153</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 139 125</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Application\OneSecondTimers.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 171</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 27 28 120 121 119 133 17 122 124 125 126 134</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1225,1257 ----
+        <file>$PROJ_DIR$\..\Hardware\hal_clock_control.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_lpm.c</file>
+        <file>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</file>
++       <file>$PROJ_DIR$\..\Application\BitmapData.c</file>
+      </outputs>
+      <file>
++       <name>[ROOT_NODE]</name>
+        <outputs>
+          <tool>
++           <name>XLINK</name>
++           <file> 25 96</file>
++         </tool>
++         <tool>
++           <name>ULP430</name>
++           <file> 98</file>
+          </tool>
+        </outputs>
+      </file>
+      <file>
++       <name>$PROJ_DIR$\Gen2\Exe\gen2.d43</name>
+        <outputs>
+          <tool>
++           <name>XLINK</name>
++           <file> 96</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
++           <name>XLINK</name>
++           <file> 170 188 91 172 120 123 22 83 26 113 121 111 112 100 88 89 40 97 39 114 108 107 109 122 33 103 136 118 27 119 106 104 117 116 102 37 90 85 28 34 38 24 32 36 35 101 95 115 110 23 99 124 169</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1389,1401 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 172</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 101 108 109 98 99 111 105 110 112 94 113 26 34 114 115 116 117 25 38 93 30 24 27 28 120 121 119 133 177 122 17 124 125 154 149 131 102 126 107 136 137 128</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1260,1441 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 205 119</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 45</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 78 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 240 233 237 238 195 174 191 159 171 194 61 202 0 166 8 161 79 1 12 164 192 74</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 78 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 240 233 237 238 195 174 191 159 171 194 61 202 0 166 8 161 79 1 12 164 192 74</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Statistics.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 183 106</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 44</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 61 194 77 0 74</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 61 194 77 0 74</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\TestMode.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 221 104</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 41</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 158 13 14 75 76 16 81 15 190 199 78 195 4 10 160 193 174 191 196 6 245 57 189 236 255 235 259 234 237 233 61 194 202 0 74 7</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 158 13 14 75 76 16 81 15 190 199 78 195 4 10 160 193 174 191 196 6 245 57 189 236 255 235 259 234 237 233 61 194 202 0 74 7</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Utilities.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 207 117</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 125</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 195 174 191 171 196 61 194 202 0 1 80 71 164</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 195 174 191 171 196 61 194 202 0 1 80 71 164</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Vibration.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 185 116</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 127</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 61 194 202 195 174 191 200 201 0 79 1</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 61 194 202 195 174 191 200 201 0 79 1</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\main.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 94 115</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 47</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 238 237 233 240 61 194 202 163 196 195 174 191 201 6 171 245 159 3 0 12 74 198 79 161 1 73 9 162 77 80 7 164 71</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 238 237 233 240 61 194 202 163 196 195 174 191 201 6 171 245 159 3 0 12 74 198 79 161 1 73 9 162 77 80 7 164 71</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\MessageQueues.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 203 103</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 46</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 240 195 174 191 61 194 163 202 59 0 77 80</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 240 195 174 191 61 194 163 202 59 0 77 80</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\OneSecondTimers.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 211 118</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 137</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 238 195 174 191 159 61 194 202 0 1 162</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 238 195 174 191 159 61 194 202 0 1 162</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1404,1729 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 67</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 120 115 116 117 114 121 119 94 113 108 109 98 99 111 105 110 112 26 34 25 38 93 30 24 28 27 133 177 129 17 122 124 125 126 107 131 136 64</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\..\..\..\..\[ROOT_NODE]</name>
+-       <outputs>
+-         <tool>
+-           <name>XLINK</name>
+-           <file> 71 97</file>
+          </tool>
+          <tool>
+-           <name>ULP430</name>
+-           <file> 95</file>
+-         </tool>
+-       </outputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</name>
+-       <outputs>
+-         <tool>
+-           <name>A430</name>
+-           <file> 70</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>A430</name>
+-           <file> 115 116</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 106</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 152 108 109 98 99 111 105 110 112 94 113 26 34 114 115 116 117 25 38 93 30 24</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 180</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 114 94 113 108 109 98 99 111 105 110 112 26 34 115 116 117 25 38 93</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 162</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 161</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 146</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 5</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\list.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 90</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 152 108 109 98 99 111 105 110 112 94 113 26 34 114 115 116 117 25 38 93 24</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\queue.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 104</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 152 108 109 98 99 111 105 110 112 101 94 113 26 34 114 115 116 117 25 38 93 30 24 31 29 5 27</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 181</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 132 108 109 98 99 111 105 110 112 141 152 101 31 94 113 26 34 114 115 116 117 25 38 93 30 24 29</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 86</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 115 116 117 114 43</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMAP.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 87</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 115 116 117 114 46 38</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMM.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 83</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 115 116 117 114 48 44</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_TLV.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 92</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 115 116 117 114 50</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 82</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 115 116 117 114 52 44 129</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_accelerometer.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 80</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 28 27 120 121 119 118 133</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_battery.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 88</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 30 24 120 121 119 177 125 131 107</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_boot.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 85</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 115 116 117 114 145</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_calibration.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 84</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 115 116 117 114 129</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_clock_control.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 77</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 38 120 115 116 117 114 121 119 147</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_lpm.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 81</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 38 114 120 115 116 117 121 119 161 138 147 52 44 17 122 149</file>
+-         </tool>
+-       </inputs>
+-     </file>
+-     <file>
+-       <name>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</name>
+-       <outputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 68</file>
+-         </tool>
+-       </outputs>
+-       <inputs>
+-         <tool>
+-           <name>ICC430</name>
+-           <file> 8 34 114 115 116 117 38 120 121 119 147 48 44 52</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1444,1464 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 209 83</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 139</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 195 4 10 160 193 174 191 57 189 13 14 75 76 16 81 15 190 236 255 235 259 234 240 233 238 237 159 171 245 61 194 202 0 1 12 161 164 71</file>
+          </tool>
+          <tool>
++           <name>BICOMP</name>
++           <file> 195 4 10 160 193 174 191 57 189 13 14 75 76 16 81 15 190 236 255 235 259 234 240 233 238 237 159 171 245 61 194 202 0 1 12 161 164 71</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1732,1744 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 75</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 27 24 30 17 122 124 120 121 119 123 138 129 125 126 100 134 128 151 102</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1467,1487 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 92 32</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 19</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 240 61 194 202 195 174 191 201 196 245 0 1 77 162 74 9 79</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 240 61 194 202 195 174 191 201 196 245 0 1 77 162 74 9 79</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1747,1759 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 79</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 120 121 119 161 143 138 125</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1490,1510 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 86 36</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 20</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 195 174 191 167 5 196 0</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 195 174 191 167 5 196 0</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1762,1774 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 78</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 120 115 116 117 114 121 119 142</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1513,1533 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 228 35</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 157</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 195 4 10 160 193 174 191 200</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 195 4 10 160 193 174 191 200</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1777,1789 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 76</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 120 115 116 117 114 121 119 94 113 108 109 98 99 111 105 110 112 26 34 25 38 93 128 130</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1536,1556 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 204 33</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 18</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 195 4 10 160 193 174 191 57 189 13 14 75 76 16 81 15 190 236 255 235 259 234 74 244</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 195 4 10 160 193 174 191 57 189 13 14 75 76 16 81 15 190 236 255 235 259 234 74 244</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1792,1804 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 69</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 94 113 108 109 98 99 111 105 110 112 26 34 114 115 116 117 25 38 93 28 27 24 130 136 64 125</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1559,1579 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 182 136</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 21</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 238 237 233 244 164 71 0</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 238 237 233 244 164 71 0</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1807,1834 ****
+        <outputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 74</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
+-           <file> 8 107 163 156</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
+-       <name>$PROJ_DIR$\Gen2\Exe\gen2.d43</name>
+        <outputs>
+          <tool>
+-           <name>XLINK</name>
+-           <file> 97</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+-           <name>XLINK</name>
+-           <file> 175 91 89 179 174 178 73 67 72 166 176 164 165 153 86 87 83 92 82 167 159 158 160 180 76 150 69 171 74 172 157 155 170 169 146 80 88 85 84 77 81 68 75 79 78 106 90 168 162 70 104 181 173</file>
+          </tool>
+        </inputs>
+      </file>
+--- 1582,1621 ----
+        <outputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 216 27</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 150</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
+            <name>ICC430</name>
++           <file> 50 12 168 105</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 12 168 105</file>
+          </tool>
+        </inputs>
+      </file>
+      <file>
++       <name>$PROJ_DIR$\..\Application\Background.c</name>
+        <outputs>
+          <tool>
++           <name>BICOMP</name>
++           <file> 155</file>
+          </tool>
+        </outputs>
+        <inputs>
+          <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 61 194 202 195 174 191 201 17 171 6 159 196 5 198 153 0 1 74 12 162 9 77 164 71 161 79 11 151 73</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 61 194 202 195 174 191 201 17 171 6 159 196 5 198 153 0 1 74 12 162 9 77 164 71 161 79 11 151 73</file>
+          </tool>
+        </inputs>
+      </file>
+***************
+*** 1837,1852 ****
+        <outputs>
+          <tool>
+            <name>XLINK</name>
+-           <file> 71 97</file>
+          </tool>
+          <tool>
+            <name>ULP430</name>
+-           <file> 95</file>
+          </tool>
+        </outputs>
+      </file>
+      <forcedrebuild>
+-       <name>[REBUILD_ALL]</name>
+      </forcedrebuild>
+    </configuration>
+  </project>
+--- 1624,2361 ----
+        <outputs>
+          <tool>
+            <name>XLINK</name>
++           <file> 25 96</file>
+          </tool>
+          <tool>
+            <name>ULP430</name>
++           <file> 98</file>
+          </tool>
+        </outputs>
+      </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Accelerometer.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 230 22</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 29</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 78 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 240 233 237 238 195 174 191 175 61 194 201 202 0 1 73 74</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 78 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 240 233 237 238 195 174 191 175 61 194 201 202 0 1 73 74</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MemMang\heap_4.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 93 101</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 84</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 165 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 240 233</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 165 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 240 233</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\portext_s43.asm</name>
++       <outputs>
++         <tool>
++           <name>A430</name>
++           <file> 23 232</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>A430</name>
++           <file> 4 10</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\BufferPool.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 217 113</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 42</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 240 195 174 191 196 61 194 202 163 77 0 80</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 240 195 174 191 196 61 194 202 163 77 0 80</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Buttons.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 229 121</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 129</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 238 61 194 196 195 174 191 201 200 198 0 74 1 202 161 162 79</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 238 61 194 196 195 174 191 201 200 198 0 74 1 202 161 162 79</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\DebugUart.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 224 111</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 31</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 238 237 233 61 194 195 174 191 159 201 196 171 0 77 240 1 7</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 238 237 233 61 194 195 174 191 159 201 196 171 0 77 240 1 7</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Display.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 223 112</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 49</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 61 194 202 0 161 164 71 74 162</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 237 233 61 194 202 0 161 164 71 74 162</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Fonts.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 218 100</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 43</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 197 0</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 197 0</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\Icons.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 220 114</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 87</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 2</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 2</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\IdleTask.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 180 108</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 138</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 61 194 202 196 195 174 191 6 245 3 0 74 1 80 164 71</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 237 61 194 202 196 195 174 191 6 245 3 0 74 1 80 164 71</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\LcdDisplay.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 181 107</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 30</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 78 13 14 75 76 16 81 15 190 158 199 165 57 189 236 255 193 4 10 160 235 259 234 240 233 237 244 61 194 202 195 174 191 245 201 171 196 6 159 5 3 0 1 8 74 162 12 73 198 77 164 9 71 161 166 2 197 79 192 80 7</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 78 13 14 75 76 16 81 15 190 158 199 165 57 189 236 255 193 4 10 160 235 259 234 240 233 237 244 61 194 202 195 174 191 245 201 171 196 6 159 5 3 0 1 8 74 162 12 73 198 77 164 9 71 161 166 2 197 79 192 80 7</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\LcdDriver.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 219 109</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 48</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 195 174 191 159 194 61 0 8 79</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 195 174 191 159 194 61 0 8 79</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\Lowinit.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 208 122</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 130</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 193 57 189 13 14 75 76 16 81 15 190 236 255 4 10 160 235 259 234</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 193 57 189 13 14 75 76 16 81 15 190 236 255 4 10 160 235 259 234</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\portable\MSP430F5438\port.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 226 110</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 128</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 167</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 167</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\list.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 212 95</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 132</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 165 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 233</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 165 13 14 75 76 16 81 15 190 57 189 236 255 193 4 10 160 235 259 234 233</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\croutine.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 178 102</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 134</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 56</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 56</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\queue.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 227 99</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 135</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 165 13 14 75 76 16 81 15 190 78 57 189 236 255 193 4 10 160 235 259 234 240 233 241 239 56 237</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 165 13 14 75 76 16 81 15 190 78 57 189 236 255 193 4 10 160 235 259 234 240 233 241 239 56 237</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\..\FreeRTOS\tasks.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 186 124</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 154</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 158 13 14 75 76 16 81 15 190 199 165 78 241 57 189 236 255 193 4 10 160 235 259 234 240 233 239</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 158 13 14 75 76 16 81 15 190 199 165 78 241 57 189 236 255 193 4 10 160 235 259 234 240 233 239</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_FLASH.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 214 88</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 131</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 4 10 160 193 264</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 4 10 160 193 264</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMAP.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 225 89</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 133</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 4 10 160 193 267 259</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 4 10 160 193 267 259</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_PMM.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 222 40</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 141</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 4 10 160 193 269 265</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 4 10 160 193 269 265</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_TLV.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 156 97</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 140</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 4 10 160 193 271</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 4 10 160 193 271</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\F5xx_F6xx_Core_Lib\HAL_UCS.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 206 39</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 143</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 4 10 160 193 273 265 245</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 4 10 160 193 273 265 245</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_accelerometer.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 213 37</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 144</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 238 237 195 174 191 175 159</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 238 237 195 174 191 175 159</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_battery.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 179 90</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 145</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 195 174 191 171 0 161 12</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 57 189 13 14 75 76 16 81 15 190 236 255 193 4 10 160 235 259 234 240 233 195 174 191 171 0 161 12</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_boot.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 215 85</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 146</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 4 10 160 193 3</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 4 10 160 193 3</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_calibration.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 210 28</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 147</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 4 10 160 193 245</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 4 10 160 193 245</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_clock_control.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 184 34</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 148</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 259 195 4 10 160 193 174 191 6</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 259 195 4 10 160 193 174 191 6</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_lpm.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 177 38</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 149</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 259 193 195 4 10 160 174 191 167 196 6 273 265 61 194 8</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 259 193 195 4 10 160 174 191 167 196 6 273 265 61 194 8</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Hardware\hal_miscellaneous.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 231 24</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 82</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 255 193 4 10 160 259 195 174 191 6 269 265 273</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 255 193 4 10 160 259 195 174 191 6 269 265 273</file>
++         </tool>
++       </inputs>
++     </file>
++     <file>
++       <name>$PROJ_DIR$\..\Application\BitmapData.c</name>
++       <outputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 176 26</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 126</file>
++         </tool>
++       </outputs>
++       <inputs>
++         <tool>
++           <name>ICC430</name>
++           <file> 50 164 192 194</file>
++         </tool>
++         <tool>
++           <name>BICOMP</name>
++           <file> 164 192 194</file>
++         </tool>
++       </inputs>
++     </file>
+      <forcedrebuild>
++       <name>$PROJ_DIR$\..\Application\OledDisplay.c</name>
++       <tool>ICC430</tool>
++     </forcedrebuild>
++     <forcedrebuild>
++       <name>$PROJ_DIR$\..\Application\OledFonts.c</name>
++       <tool>ICC430</tool>
++     </forcedrebuild>
++     <forcedrebuild>
++       <name>$PROJ_DIR$\..\Hardware\hal_oled.c</name>
++       <tool>ICC430</tool>
++     </forcedrebuild>
++     <forcedrebuild>
++       <name>$PROJ_DIR$\..\Hardware\OledDriver.c</name>
++       <tool>ICC430</tool>
++     </forcedrebuild>
++     <forcedrebuild>
++       <name>$PROJ_DIR$\..\Hardware\hal_analog_display.c</name>
++       <tool>ICC430</tool>
+      </forcedrebuild>
+    </configuration>
+  </project>

@@ -61,6 +61,11 @@
 /*********************************************************************
  * FUNCTIONS
  */
+#if (TOOLSET != IAR_TOOLS)
+  #ifndef  __data20
+    #define __data20
+  #endif
+#endif
 
 void flashErasePage( unsigned char *addr );
 void flashErasePageData20(unsigned char __data20 * addr);

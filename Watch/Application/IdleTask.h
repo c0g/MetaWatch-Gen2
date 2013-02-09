@@ -37,7 +37,11 @@ void PrintResetSource(void);
 typedef enum
 {
   eWrapperTaskCheckInId = 0,
+#if (TOOLSET == IAR_TOOLS)
   eDisplayTaskCheckInId = 1,
+#else
+  eDisplayTaskCheckInId = 1
+#endif
   /* add user tasks here */
   
 } etTaskCheckInId;

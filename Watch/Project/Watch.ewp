@@ -183,7 +183,7 @@
         </option>
         <option>
           <name>CCListCFile</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCListCMnemonics</name>
@@ -508,7 +508,7 @@
         </option>
         <option>
           <name>AList</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>AListHeader</name>

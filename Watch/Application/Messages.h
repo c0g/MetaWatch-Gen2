@@ -275,7 +275,11 @@ typedef enum
   
   EnableAdvMsg = 0xf1,
   SetAdvDataMsg = 0xf2,
+#if (TOOLSET == IAR_TOOLS)
   SetScanRespMsg = 0xf3,
+#else
+  SetScanRespMsg = 0xf3
+#endif
 
 } eMessageType;
 

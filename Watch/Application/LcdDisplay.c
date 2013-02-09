@@ -143,7 +143,11 @@ static void DrawTemplate(DrawInfo_t *Info);
 static unsigned char Overlapping(unsigned char Option);
 
 // widget is a list of Draw_t, DrawList can be multiple for each type of layout
-const static Draw_t DrawList[][WIDGET_DRAW_ITEM_NUM] =
+#if (TOOLSET == IAR_TOOLS)
+  const static Draw_t DrawList[][WIDGET_DRAW_ITEM_NUM] =
+#else
+  static const Draw_t DrawList[][WIDGET_DRAW_ITEM_NUM] =
+#endif
 {
   { //1Q
     {DrawHour, {1, 2, MetaWatchTime, DRAW_OPT_SEPARATOR}},
@@ -187,7 +191,11 @@ typedef struct
   const Draw_t *pDrawList;
 } Widget_t;
 
-const static Widget_t HomeWidget[] =
+#if (TOOLSET == IAR_TOOLS)
+  const static Widget_t HomeWidget[] =
+#else
+  static const Widget_t HomeWidget[] =
+#endif
 {
   {0, 7, DrawList[0]},
   {3, 9, DrawList[1]},
@@ -1640,7 +1648,7 @@ static void DrawHour(DrawInfo_t *Info)
 static void DrawAmPm(DrawInfo_t *Info)
 {
   if (Get12H() != TWELVE_HOUR) return;
-  DrawText(RTCHOUR > 11 ? "pm" : "am", 2, Info->X, Info->Y, Info->Id, pdFALSE);
+  DrawText((unsigned char*)(RTCHOUR > 11 ? "pm" : "am"), 2, Info->X, Info->Y, Info->Id, pdFALSE);
 }
 
 static void DrawMin(DrawInfo_t *Info)
@@ -2135,29 +2143,29 @@ void EraseTemplateHandler(tMessage *pMsg)
 
 void WriteToTemplateHandler(tMessage *pMsg)
 {
-  unsigned char __data20* baseTempAddr = 0;
-  
-  /* map the payload */
-  tWriteToTemplateMsgPayload* pData = (tWriteToTemplateMsgPayload*)pMsg->pBuffer;
-  
-  unsigned char RowA = pData->RowSelectA;
-  unsigned char RowB = pData->RowSelectB;
-  
-  baseTempAddr = (unsigned char __data20*)&pWatchFace[pData->TemplateSelect-TEMPLATE_1][0]; 
-  
-  //Get address of 1st row
-  unsigned char __data20 *addr = baseTempAddr + (RowA * BYTES_PER_LINE);
-  flashWriteData20(addr, BYTES_PER_LINE, pData->pLineA);
-  
-  //Check if writing 1 or 2 lines.
-  if ((pMsg->Options & MSG_OPT_WRTBUF_1_LINE))
-  {
-    //Writing 2 lines
-    
-    //Get address of 2nd row
-    unsigned char __data20 *addr = baseTempAddr + (RowB * BYTES_PER_LINE);
-    flashWriteData20(addr, BYTES_PER_LINE, pData->pLineB);
-  }
+	  unsigned char __data20* baseTempAddr = 0;
+
+	  /* map the payload */
+	  tWriteToTemplateMsgPayload* pData = (tWriteToTemplateMsgPayload*)pMsg->pBuffer;
+
+	  unsigned char RowA = pData->RowSelectA;
+	  unsigned char RowB = pData->RowSelectB;
+
+	  baseTempAddr = (unsigned char __data20*)&pWatchFace[pData->TemplateSelect-TEMPLATE_1][0];
+
+	  //Get address of 1st row
+	  unsigned char __data20 *addr = baseTempAddr + (RowA * BYTES_PER_LINE);
+	  flashWriteData20(addr, BYTES_PER_LINE, pData->pLineA);
+
+	  //Check if writing 1 or 2 lines.
+	  if ((pMsg->Options & MSG_OPT_WRTBUF_1_LINE))
+	  {
+	    //Writing 2 lines
+
+	    //Get address of 2nd row
+	    unsigned char __data20 *addr = baseTempAddr + (RowB * BYTES_PER_LINE);
+	    flashWriteData20(addr, BYTES_PER_LINE, pData->pLineB);
+	  }
 }
 
 unsigned char LcdRtcUpdateHandlerIsr(void)

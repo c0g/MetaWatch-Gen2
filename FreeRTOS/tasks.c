@@ -368,9 +368,13 @@ tskTCB * pxNewTCB;
 		#if( portSTACK_GROWTH < 0 )
 		{
 			pxTopOfStack = pxNewTCB->pxStack + ( usStackDepth - 1 );
-#pragma diag_suppress=Pe1053      
+#if (TOOLSET == IAR_TOOLS)
+  #pragma diag_suppress=Pe1053
 			pxTopOfStack = ( portSTACK_TYPE * ) ( ( ( unsigned long ) pxTopOfStack ) & ( ( unsigned long ) ~portBYTE_ALIGNMENT_MASK  ) );
-#pragma diag_default=Pe1053
+  #pragma diag_default=Pe1053
+#else
+			pxTopOfStack = ( portSTACK_TYPE * ) ( ( ( unsigned long ) pxTopOfStack ) & ( ( unsigned long ) ~portBYTE_ALIGNMENT_MASK  ) );
+#endif
 		}
 		#else
 		{
@@ -666,7 +670,9 @@ tskTCB * pxNewTCB;
 				/* The list item will be inserted in wake time order. */
 				listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xGenericListItem ), xTimeToWake );
 
-#pragma diag_suppress=Pa082 /* ignore order of volatile access warning */
+#if (TOOLSET == IAR_TOOLS)
+  #pragma diag_suppress=Pa082 /* ignore order of volatile access warning */
+#endif
 				if( xTimeToWake < xTickCount )
 				{
 					/* Wake time has overflowed.  Place this item in the
@@ -679,7 +685,9 @@ tskTCB * pxNewTCB;
 					current block list. */
 					vListInsert( ( xList * ) pxDelayedTaskList, ( xListItem * ) &( pxCurrentTCB->xGenericListItem ) );
 				}
-#pragma diag_default=Pa082
+#if (TOOLSET == IAR_TOOLS)
+  #pragma diag_default=Pa082
+#endif
 			}
 			xAlreadyYielded = xTaskResumeAll();
 		}
@@ -1563,10 +1571,14 @@ void vTaskSwitchContext( void )
 	}
 	#endif
 
-#pragma diag_suppress=Pa082
+#if (TOOLSET == IAR_TOOLS)
+  #pragma diag_suppress=Pa082
+#endif
 	taskFIRST_CHECK_FOR_STACK_OVERFLOW();
 	taskSECOND_CHECK_FOR_STACK_OVERFLOW();
-#pragma diag_default=Pa082
+#if (TOOLSET == IAR_TOOLS)
+  #pragma diag_default=Pa082
+#endif
 
 	/* Find the highest priority queue that contains ready tasks. */
 	while( listLIST_IS_EMPTY( &( pxReadyTasksLists[ uxTopReadyPriority ] ) ) )
@@ -1628,7 +1640,9 @@ portTickType xTimeToWake;
 
 			listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xGenericListItem ), xTimeToWake );
 
-#pragma diag_suppress=Pa082 /* ignore order of volatile access warning */
+#if (TOOLSET == IAR_TOOLS)
+  #pragma diag_suppress=Pa082 /* ignore order of volatile access warning */
+#endif
 			if( xTimeToWake < xTickCount )
 			{
 				/* Wake time has overflowed.  Place this item in the overflow list. */
@@ -1639,7 +1653,9 @@ portTickType xTimeToWake;
 				/* The wake time has not overflowed, so we can use the current block list. */
 				vListInsert( ( xList * ) pxDelayedTaskList, ( xListItem * ) &( pxCurrentTCB->xGenericListItem ) );
 			}
-#pragma diag_default=Pa082
+#if (TOOLSET == IAR_TOOLS)
+  #pragma diag_default=Pa082
+#endif
 		}
 	}
 	#else

@@ -6,7 +6,11 @@
 
 /******************************************************************************/
 
-__no_init __root static unsigned long long Signature @SIGNATURE_ADDR;
+#if (TOOLSET == IAR_TOOLS)
+  __no_init __root static unsigned long long Signature @SIGNATURE_ADDR;
+#else
+  static unsigned long long Signature =  SIGNATURE_ADDR;
+#endif
 
 void SetBootloaderSignature(void)
 {
@@ -26,7 +30,11 @@ unsigned long long GetBootloaderSignature(void)
 
 /******************************************************************************/
 
-__no_init __root static unsigned int ResetSource @RESET_REASON_ADDR;
+#if (TOOLSET == IAR_TOOLS)
+  __no_init __root static unsigned int ResetSource @RESET_REASON_ADDR;
+#else
+  static unsigned int ResetSource = RESET_REASON_ADDR;
+#endif
 
 void SaveResetSource(void)
 {

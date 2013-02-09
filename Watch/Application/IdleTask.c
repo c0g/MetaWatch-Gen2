@@ -44,7 +44,11 @@
 
 /******************************************************************************/
 
-__no_init __root static tWatchdogInfo WatchdogInfo @ WATCHDOG_INFO_ADDR;
+#if (TOOLSET == IAR_TOOLS)
+  __no_init __root static tWatchdogInfo WatchdogInfo @ WATCHDOG_INFO_ADDR;
+#else
+  static tWatchdogInfo WatchdogInfo;
+#endif
 
 /******************************************************************************/
 

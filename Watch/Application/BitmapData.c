@@ -327,12 +327,15 @@ const unsigned char pTemplate[][BYTES_PER_SCREEN] =
 //Each template array is made large enough to fit into 3 Flash segments so that
 //erasing a template is easier.
 
-#pragma location = "TEMPLATE_FLASH_HIGH_MEM"
-__data20 const unsigned char pWatchFace[][1] =
-{
-  {0}
-};
-#pragma required=pWatchFace
+#if (TOOLSET == IAR_TOOLS)
+    #pragma location = "TEMPLATE_FLASH_HIGH_MEM"
+    __data20 const unsigned char pWatchFace[][1] =    {
+                                                       {0}
+                                                      };
+    #pragma required=pWatchFace
+#else
+  const unsigned char pWatchFace[][1] = {0,0};
+#endif
 
 const unsigned char pBootloader[BOOTLOADER_COLS * BOOTLOADER_ROWS] =
 {
